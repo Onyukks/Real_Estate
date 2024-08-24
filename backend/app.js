@@ -36,10 +36,7 @@ const PORT = process.env.PORT
 const server = app.listen(PORT,()=>console.log(`Server is up and running on ${PORT}`))
 
 const io = require('socket.io')(server,{
-    pingTimeout: 60000,
-    cors:{
-        origin:'http://localhost:5173'
-    }
+    pingTimeout: 60000
 })
 
 let onlineUsers = []
