@@ -61,22 +61,9 @@ const ProfileUpdate =()=> {
       </div>
       <div className="sideContainer">
         <img src={avatar[0] || currentUser.avatar || '/noavatar.jpg'} alt="" className="avatar" />
-        {console.log(`env process: ${process.env.VITE_CLOUD_NAME}`)
-       }
-       {
-        console.log(`env process ${process.env.VITE_CLOUD_PRESET}`)
-       }
-       {
-        console.log(`env meta: ${import.meta.env.VITE_CLOUD_NAME}`)
-       }
-       {
-        console.log(`env meta: ${import.meta.env.VITE_CLOUD_PRESET}`)
-       }{
-        console.log(import.meta.env.VITE_CLOUD_PRESET)
-       }
         <UploadWidget uwConfig={{
-          cloudName:`${process.env.VITE_CLOUD_NAME}`,
-          uploadPreset: `${process.env.VITE_CLOUD_PRESET}`,
+          cloudName:process.env.VITE_CLOUD_NAME,
+          uploadPreset: process.env.VITE_CLOUD_PRESET,
           multiple:false,
           maxImageFileSize:2000000,
           folder:"avatars"
