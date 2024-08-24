@@ -1,0 +1,43 @@
+@import "../../responsive.scss";
+
+.listPage {
+  display: flex;
+  height: 100%;
+
+  .listContainer {
+    flex: 3;
+    height: 100%;
+
+    .wrapper{
+      height: 100%;
+      padding-right: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      overflow-y: scroll;
+      padding-bottom: 50px;
+
+      &::-webkit-scrollbar {
+        width: 8px; /* Width of the scrollbar */
+      }
+    
+      &::-webkit-scrollbar-track {
+        border-radius: 10px; /* Round the scrollbar track */
+      }
+    
+      &::-webkit-scrollbar-thumb {
+        background: #dad6d6; /* Color of the scrollbar thumb */
+        border-radius: 10px; /* Round the scrollbar thumb */
+      }
+    }
+  }
+  .mapContainer {
+    flex: 2;
+    height: 100%;
+    background-color: #fcf5f3;
+
+    @include md{
+      display: none;
+    }
+  }
+}
