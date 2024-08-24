@@ -197,8 +197,8 @@ const NewPost =()=> {
         ))}
       </div>
          <UploadWidget uwConfig={{
-          cloudName:"realestate",
-          uploadPreset: "dkyao7zi3",
+          cloudName:`${process.env.VITE_CLOUD_NAME}`,
+          uploadPreset: `${process.env.VITE_CLOUD_PRESET}`,
           multiple:true,
           folder:"residencyImages"
         }}
