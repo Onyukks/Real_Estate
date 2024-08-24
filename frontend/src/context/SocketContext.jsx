@@ -9,7 +9,7 @@ export const SocketContextProvider = ({ children }) => {
   const [socket,setSocket] = useState( null);
     
     useEffect(()=>{
-       setSocket(io(`${import.meta.env.VITE_BACKEND_API }`))
+       setSocket(io('http://localhost:5000'))
     },[])
 
     useEffect(()=>{
