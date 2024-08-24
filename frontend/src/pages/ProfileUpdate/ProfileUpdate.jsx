@@ -62,8 +62,8 @@ const ProfileUpdate =()=> {
       <div className="sideContainer">
         <img src={avatar[0] || currentUser.avatar || '/noavatar.jpg'} alt="" className="avatar" />
         <UploadWidget uwConfig={{
-          cloudName:process.env.VITE_CLOUD_NAME,
-          uploadPreset: process.env.VITE_CLOUD_PRESET,
+          cloudName:"dkyao7zi3",
+          uploadPreset: "realestate",
           multiple:false,
           maxImageFileSize:2000000,
           folder:"avatars"
