@@ -5,6 +5,8 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;  
+  z-index: 100;   
 
   a {
     transition: all 0.4s ease;
@@ -131,31 +133,37 @@ nav {
       }
     }
 
-    .menu {
-      position: absolute;
-      top: 0;
-      right: -50%;
-      background-color: black;
-      color: white;
-      height: 100vh;
-      width: 50%;
-      transition: all 1s ease;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      font-size: 24px;
-      z-index: 99;
+ .menu {
+  display: none;
 
-      &.active {
-        right: 0;
-      }
+  @include sm {
+    display: flex;
+    position: fixed;     
+    top: 0;
+    right: 0;
+    background-color: black;
+    color: white;
+    height: 100vh;
+    width: 50%;
+    transition: transform 0.3s ease;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    z-index: 99;
 
-      @include sm {
-        a {
-          display: initial;
-        }
-      }
+    transform: translateX(100%);
+
+    &.active {
+      transform: translateX(0);
     }
+
+    a {
+      display: initial;
+    }
+  }
+}
+
   }
 }
